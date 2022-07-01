@@ -1,17 +1,16 @@
 name: Unit Test
 
 on:
-    push:
-      branches:
-        - master
-    pull_request:
-      branches: [master]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  Jest:
+  JEST:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v1
+      - uses: actions/checkout@v2
       - name: Run Tests
         run: |
           yarn
